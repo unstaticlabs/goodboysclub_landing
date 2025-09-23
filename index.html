@@ -2,76 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./src/assets/icon.ico"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
     <title>Good Boys Club</title>
-    <meta
-      name="title"
-      content="Good Boys Club"
-    />
-    <meta
-      name="description"
-      content="Good Boys Club - Are you a good boy?"
-    />
+    <meta name="title" content="Good Boys Club" />
+    <meta name="description" content="Good Boys Club - Are you a good boy?" />
     <!-- Open Graph / Facebook -->
-    <meta
-      property="og:type"
-      content="website"
-    />
-    <meta
-      property="og:url"
-      content="https://goodboys.club"
-    />
-    <meta
-      property="og:title"
-      content="Good Boys Club"
-    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://goodboys.club" />
+    <meta property="og:title" content="Good Boys Club" />
     <meta
       property="og:description"
       content="Good Boys Club - Are you a good boy?"
     />
-    <meta
-      property="og:image"
-      content="/og-image-20250923.png"
-    />
+    <meta property="og:image" content="/og-image-20250923.png" />
 
     <!-- Twitter -->
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <meta
-      name="twitter:url"
-      content="https://goodboys.club"
-    />
-    <meta
-      name="twitter:title"
-      content="Good Boys Club"
-    />
+    <meta name="twitter:url" content="https://goodboys.club" />
+    <meta name="twitter:title" content="Good Boys Club" />
     <meta
       name="twitter:description"
       content="Good Boys Club - Are you a good boy?"
     />
-    <meta
-      name="twitter:image"
-      content="/og-image-20250923.png"
-    />
+    <meta name="twitter:image" content="/og-image-20250923.png" />
   </head>
   <body>
     <div id="root"></div>
-    <script
-      type="module"
-      src="/src/main.tsx"
-    ></script>
+    <script>
+      (function () {
+        var l = window.location;
+        if (l.search && l.search.startsWith("?")) {
+          var redirect = l.search
+            .slice(1)
+            .split("&")
+            .find((s) => s && !s.startsWith("utm_"));
+          if (redirect) {
+            window.history.replaceState(null, null, "/" + redirect);
+          }
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
