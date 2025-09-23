@@ -19,7 +19,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
+          <h3 className="font-bold text-lg">Socials</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -41,6 +41,17 @@ export const Footer = () => {
               Twitter / X
             </a>
           </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href="https://goodboysobey.com"
+              className="opacity-60 hover:opacity-100"
+            >
+              Store
+            </a>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">
@@ -48,9 +59,9 @@ export const Footer = () => {
           <div>
             <Link
               className="opacity-60 hover:opacity-100"
-              to="/terms-of-service"
+              to="/terms-and-conditions"
             >
-              Terms of Service
+              Terms and Conditions
             </Link>
           </div>
 

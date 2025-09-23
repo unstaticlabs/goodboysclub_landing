@@ -7,7 +7,7 @@ import { Sponsors } from "./components/Sponsors";
 import "./App.css";
 
 import { Route, Routes } from "react-router";
-import { TermsOfService } from "./components/TermsOfService";
+import { TermsAndConditions } from "./components/TermsAndConditions";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
             </>
           }
         />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
       <ScrollToTop />

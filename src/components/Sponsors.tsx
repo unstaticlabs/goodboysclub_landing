@@ -1,9 +1,11 @@
 import QRCode from "react-qr-code";
 import { Button } from "./ui/button";
 
+import { FaTelegramPlane } from "react-icons/fa";
+
 export const Sponsors = () => {
   return (
-    <section id="sponsors" className="container pt-16 sm:py-24">
+    <section id="join-the-challenge" className="container pt-16 sm:py-24">
       <div className="flex flex-col justify-center items-center">
         <a href="https://t.me/goodboysobey_bot?start" target="_blank">
           <div style={{ background: "white", padding: "16px" }}>
@@ -16,6 +18,7 @@ export const Sponsors = () => {
           }
           className="w-full md:w-1/3 mt-4 text-white"
         >
+          <FaTelegramPlane className="mr-2 w-5 h-5" />{" "}
           Join the Challenge
         </Button>
       </div>
