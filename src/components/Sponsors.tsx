@@ -1,57 +1,23 @@
-import { Radar } from "lucide-react";
-
-interface SponsorProps {
-  icon: JSX.Element;
-  name: string;
-}
-
-const sponsors: SponsorProps[] = [
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 1",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 2",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 3",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 4",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 5",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 6",
-  },
-];
+import QRCode from "react-qr-code";
+import { Button } from "./ui/button";
 
 export const Sponsors = () => {
   return (
-    <section
-      id="sponsors"
-      className="container pt-24 sm:py-32"
-    >
-      <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
-        Investors and founders
-      </h2>
-
-      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-        {sponsors.map(({ icon, name }: SponsorProps) => (
-          <div
-            key={name}
-            className="flex items-center gap-1 text-muted-foreground/60"
-          >
-            <span>{icon}</span>
-            <h3 className="text-xl  font-bold">{name}</h3>
+    <section id="sponsors" className="container pt-24 sm:py-24">
+      <div className="flex flex-col justify-center items-center">
+        <a href="https://t.me/goodboysobey_bot?start" target="_blank">
+          <div style={{ background: "white", padding: "16px" }}>
+            <QRCode value="https://t.me/goodboysobey_bot?start" />
           </div>
-        ))}
+        </a>
+        <Button
+          onClick={() =>
+            window.open("https://t.me/goodboysobey_bot?start", "_blank")
+          }
+          className="w-full md:w-1/3 mt-4 text-white"
+        >
+          Join the Challenge
+        </Button>
       </div>
     </section>
   );
