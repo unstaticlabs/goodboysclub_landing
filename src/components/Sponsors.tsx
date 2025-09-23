@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export const Sponsors = () => {
   return (
-    <section id="sponsors" className="container pt-24 sm:py-24">
+    <section id="sponsors" className="container pt-16 sm:py-24">
       <div className="flex flex-col justify-center items-center">
         <a href="https://t.me/goodboysobey_bot?start" target="_blank">
           <div style={{ background: "white", padding: "16px" }}>

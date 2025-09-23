@@ -6,13 +6,26 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { Sponsors } from "./components/Sponsors";
 import "./App.css";
 
+import { Route, Routes } from "react-router";
+import { TermsOfService } from "./components/TermsOfService";
+
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Sponsors />
-      <FAQ />
+      <Routes>
+        <Route
+          index
+          element={
+            <>
+              <Hero />
+              <Sponsors />
+              <FAQ />
+            </>
+          }
+        />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+      </Routes>
       <Footer />
       <ScrollToTop />
     </>

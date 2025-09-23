@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { LogoIcon } from "./Icons";
 
 export const Footer = () => {
@@ -45,23 +46,18 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">About</h3>
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="/terms-of-service"
+            <Link
               className="opacity-60 hover:opacity-100"
+              to="/terms-of-service"
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
 
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="#faq"
-              className="opacity-60 hover:opacity-100"
-            >
+            <Link to="/#faq" className="opacity-60 hover:opacity-100">
               FAQ
-            </a>
+            </Link>
           </div>
         </div>
       </section>

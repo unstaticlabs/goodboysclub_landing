@@ -2,7 +2,7 @@ import image from "../assets/hero.png";
 
 export const Hero = () => {
   return (
-    <section className="container grid place-items-center py-32 md:py-24 gap-10">
+    <section className="container grid place-items-center py-24 md:py-20 gap-10">
       <div className="text-center flex flex-col items-center space-y-12">
         <main className="text-5xl md:text-6xl font-bold">
           <img src={image} alt="Hero" className="w-1/2 mx-auto" />

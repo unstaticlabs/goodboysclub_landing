@@ -12,11 +12,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
+import { Link } from "react-router";
 
 interface RouteProps {
   href: string;
@@ -24,18 +23,6 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
   {
     href: "#faq",
     label: "FAQ",
@@ -52,34 +39,31 @@ export const Navbar = () => {
       setIsVisible(scrollTop > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header className={`fixed border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background transition-transform duration-300 ease-in-out ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
+    <header
+      className={`fixed border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background transition-transform duration-300 ease-in-out ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a
+            <Link
               rel="noreferrer noopener"
-              href="/"
+              to="/"
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
               Good Boys Club
-            </a>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
-
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
@@ -97,27 +81,16 @@ export const Navbar = () => {
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                   {routeList.map(({ href, label }: RouteProps) => (
-                    <a
+                    <Link
                       rel="noreferrer noopener"
                       key={label}
-                      href={href}
+                      to={href}
                       onClick={() => setIsOpen(false)}
                       className={buttonVariants({ variant: "ghost" })}
                     >
                       {label}
-                    </a>
+                    </Link>
                   ))}
-                  <a
-                    rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
-                  >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
-                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -126,23 +99,18 @@ export const Navbar = () => {
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
             {routeList.map((route: RouteProps, i) => (
-              <a
+              <Link
                 rel="noreferrer noopener"
-                href={route.href}
+                to={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
                   variant: "ghost",
                 })}`}
               >
                 {route.label}
-              </a>
+              </Link>
             ))}
           </nav>
-
-          <div className="hidden md:flex gap-2">
-
-            <ModeToggle />
-          </div>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
