@@ -31,17 +31,29 @@ const FAQList: FAQProps[] = [
     value: "item-3",
   },
   {
+    question: "How does it work?",
+    answer:
+      "For 31 days, our Telegram bot will send you a random cagecheck each day. You’ll have 2 hours to prove you’re still locked by following the simple instruction—always doable, even if all you have is bathroom access. Your photo is then reviewed by a few peers, and you’ll review some of theirs in return. If you miss the deadline or get rejected, you use one of your 3 streak freezes. Once all freezes are gone, you’re out of the game. Last 10, 21, and 31 days to hit milestones and unlock rewards. Sign up now or before October 14th. 🔒🔥",
+    value: "item-4",
+  },
+  {
     question: "What is the Locktober Challenge?",
     answer:
       "A tradition of the chastity community. Every October, good boys around the world lock in their cages for 31 days straight. If you can prove you stayed locked every day, you win. 🔥",
-    value: "item-4",
+    value: "item-5",
   },
   {
     question: "What are the rewards?",
     answer:
       "Our Telegram bot will tell you once you enter the conversation. * Rewards unlock at 10, 21, and 31 days. * You’ll see your Streak 🔥 grow (and can use up to 3 streak freezes 🥶). * Hit the milestones and the bot will send you the info to unlock your rewards. For some rewards, shipment fees and additional tax may apply based on location.",
-    value: "item-5",
+    value: "item-6",
   },
+  {
+    question: "What happens if I miss a cagecheck?",
+    answer:
+      "Cagechecks happen at random but are selected around your daily check-in time to avoid middle of the night or middle of the workday. And you'll get three freezes to allow for a few missed ones.",
+    value: "item-7",
+  }
 ];
 
 export const FAQ = () => {
