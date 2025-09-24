@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import image from "../assets/hero.png";
 
 export const Hero = () => {
@@ -9,7 +10,15 @@ export const Hero = () => {
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto text-balance">
-          ⬇️ Sign up for the Locktober Challenge ⬇️
+          Daily&nbsp;cagechecks. 31&nbsp;days&nbsp;locked.
+          Rewards&nbsp;if&nbsp;you&nbsp;last. Just&nbsp;$1/day.
+          Sign&nbsp;up&nbsp;now.
+        </p>
+
+        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto text-balance">
+          <Link to="/#join-the-challenge">
+            ⬇️ Sign up for the Locktober Challenge before October 14th ⬇️
+          </Link>
         </p>
       </div>
 
