@@ -3,7 +3,7 @@ export const LogoIcon = () => {
   return (
     <img
       src={logo}
-      alt="Logo"
+      alt="Good Boys Club Logo"
       className="mr-2 h-6"
     />
   );
