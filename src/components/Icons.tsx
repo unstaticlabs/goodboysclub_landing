@@ -1,10 +1,10 @@
-import logo from "../assets/icon.png";
+import logo from "../assets/logo_inline_small.png";
 export const LogoIcon = () => {
   return (
     <img
       src={logo}
       alt="Logo"
-      className="mr-2 w-6 h-6 border-[1px] border-white p-[1px] border-solid"
+      className="mr-2 h-6"
     />
   );
 };

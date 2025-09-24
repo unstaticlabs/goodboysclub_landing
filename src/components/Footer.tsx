@@ -14,7 +14,6 @@ export const Footer = () => {
             className="font-bold text-xl flex"
           >
             <LogoIcon />
-            Good Boys Club
           </a>
         </div>
 
